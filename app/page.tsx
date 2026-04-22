@@ -10,12 +10,14 @@ export default function BotaniBridgeLandingPage() {
         "Ginkgo Biloba Extract",
         "Milk Thistle Extract",
       ],
+      badge: "Category",
     },
     {
       title: "Functional Sugars",
       description:
         "Selected sugar-based and sweetening ingredients for formulation, wellness, and specialty food use.",
       items: ["D-Mannose", "L-Arabinose", "Fructose", "Sucralose"],
+      badge: "Category",
     },
     {
       title: "Nutraceutical Ingredients",
@@ -27,6 +29,7 @@ export default function BotaniBridgeLandingPage() {
         "Hyaluronic Acid",
         "Taurine",
       ],
+      badge: "Category",
     },
     {
       title: "Specialty Ingredients",
@@ -38,6 +41,7 @@ export default function BotaniBridgeLandingPage() {
         "Pterostilbene",
         "Magnesium L-Threonate",
       ],
+      badge: "Category",
     },
   ];
 
@@ -64,19 +68,42 @@ export default function BotaniBridgeLandingPage() {
   ];
 
   const services = [
-    "Product sourcing",
-    "Supplier matching",
-    "OEM / private label support",
-    "Formula discussion",
-    "Documentation coordination",
-    "Sample and inquiry follow-up",
+    {
+      title: "Product sourcing",
+      subtitle: "Match product requests with relevant manufacturing resources.",
+      icon: "01",
+    },
+    {
+      title: "Supplier matching",
+      subtitle: "Connect overseas buyers with suitable Chinese partners.",
+      icon: "02",
+    },
+    {
+      title: "OEM / private label support",
+      subtitle: "Support custom packaging, formula direction, and production planning.",
+      icon: "03",
+    },
+    {
+      title: "Formula discussion",
+      subtitle: "Help communicate specification and formulation ideas with factories.",
+      icon: "04",
+    },
+    {
+      title: "Documentation coordination",
+      subtitle: "Organize key product information and follow-up materials clearly.",
+      icon: "05",
+    },
+    {
+      title: "Sample and inquiry follow-up",
+      subtitle: "Keep communication moving from initial request to next steps.",
+      icon: "06",
+    },
   ];
 
   const featuredStats = [
     "Botanical Extracts",
     "Nutraceutical Ingredients",
-    "OEM Support",
-    "China Supply Network",
+    "OEM Support"
   ];
 
   return (
@@ -92,7 +119,7 @@ export default function BotaniBridgeLandingPage() {
             </div>
           </div>
 
-          <nav className="hidden items-center gap-7 text-sm text-slate-600 md:flex">
+          <nav className="hidden items-center gap-6 text-sm text-slate-600 md:flex">
             <a href="#about" className="transition hover:text-slate-950">
               About
             </a>
@@ -104,6 +131,9 @@ export default function BotaniBridgeLandingPage() {
             </a>
             <a href="#services" className="transition hover:text-slate-950">
               Services
+            </a>
+            <a href="#news" className="transition hover:text-slate-950">
+              News
             </a>
             <a
               href="#contact"
@@ -121,38 +151,38 @@ export default function BotaniBridgeLandingPage() {
           <div className="absolute right-0 top-10 h-80 w-80 rounded-full bg-slate-200/60 blur-3xl" />
         </div>
 
-        <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-12 md:grid-cols-2 md:py-16">
+        <div className="mx-auto grid max-w-6xl items-start gap-10 px-6 py-8 md:grid-cols-[1.12fr_0.88fr] md:py-10">
           <div>
-            <div className="mb-6 inline-flex items-center rounded-full border border-emerald-200 bg-white/80 px-4 py-1.5 text-sm font-medium text-emerald-700 shadow-sm">
+            <div className="mb-5 inline-flex items-center rounded-full border border-emerald-200 bg-white/80 px-4 py-1.5 text-sm font-medium text-emerald-700 shadow-sm">
               China ingredient sourcing for global buyers
             </div>
 
-            <h1 className="max-w-xl text-4xl font-semibold leading-[1.05] tracking-tight text-slate-950 md:text-5xl">
-              Trusted bridge between Chinese manufacturers and overseas ingredient buyers.
+            <h1 className="max-w-lg text-4xl font-semibold leading-[1.02] tracking-tight text-slate-950 md:text-[3.35rem]">
+              Trusted Bridge Between Chinese Manufacturers and Overseas Ingredient Buyers.
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+            <p className="mt-4 max-w-md text-base leading-7 text-slate-600 md:text-[1.02rem]">
               BotaniBridge helps international customers connect with qualified Chinese
               suppliers in plant extracts, functional sugars, nutraceutical ingredients,
               and custom manufacturing solutions.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href="#contact"
-                className="rounded-full bg-slate-950 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:opacity-95"
+                className="rounded-full bg-slate-950 px-5 py-3 text-sm font-medium text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:opacity-95"
               >
                 Request Product Information
               </a>
               <a
                 href="#categories"
-                className="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-medium text-slate-700 transition hover:-translate-y-0.5 hover:bg-slate-50"
+                className="rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:-translate-y-0.5 hover:bg-slate-50"
               >
                 Explore Categories
               </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               {featuredStats.map((item) => (
                 <span
                   key={item}
@@ -164,32 +194,34 @@ export default function BotaniBridgeLandingPage() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute -left-6 top-10 hidden h-28 w-28 rounded-3xl bg-emerald-100 blur-2xl md:block" />
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-[28px] border border-white/70 bg-white/90 p-6 shadow-lg shadow-slate-200/70 transition hover:-translate-y-1">
-                <div className="text-sm text-slate-500">Category Focus</div>
-                <div className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
-                  Plant Extracts
+          <div className="relative flex justify-end pt-2">
+            <div className="absolute -left-4 top-10 hidden h-24 w-24 rounded-3xl bg-emerald-100 blur-2xl md:block" />
+            <div className="grid w-full max-w-[640px] gap-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="min-h-[250px] rounded-[28px] border border-white/70 bg-white/90 p-5 shadow-lg shadow-slate-200/70 transition hover:-translate-y-1">
+                  <div className="text-sm text-slate-500">Category Focus</div>
+                  <div className="mt-3 text-[1.9rem] font-semibold tracking-tight text-slate-950">
+                    Plant Extracts
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">
+                    Standardized botanical ingredients for supplement and functional
+                    product applications.
+                  </p>
                 </div>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                  Standardized botanical ingredients for supplement and functional
-                  product applications.
-                </p>
+
+                <div className="min-h-[250px] rounded-[28px] border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white p-5 shadow-lg shadow-emerald-100/50 transition hover:-translate-y-1">
+                  <div className="text-sm text-emerald-700">Supply Strength</div>
+                  <div className="mt-3 text-[1.9rem] font-semibold tracking-tight text-slate-950">
+                    OEM Support
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">
+                    Coordination for private label, custom formulas, and manufacturing
+                    communication.
+                  </p>
+                </div>
               </div>
 
-              <div className="rounded-[28px] border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white p-6 shadow-lg shadow-emerald-100/50 transition hover:-translate-y-1">
-                <div className="text-sm text-emerald-700">Supply Strength</div>
-                <div className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
-                  OEM Support
-                </div>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                  Coordination for private label, custom formulas, and manufacturing
-                  communication.
-                </p>
-              </div>
-
-              <div className="col-span-2 rounded-[32px] border border-slate-200 bg-slate-950 p-6 text-white shadow-xl shadow-slate-900/10">
+              <div className="rounded-[28px] border border-slate-900/90 bg-slate-950 p-5 text-white shadow-xl shadow-slate-900/10">
                 <div className="text-sm text-slate-400">What We Do</div>
                 <div className="mt-4 grid gap-3 md:grid-cols-3">
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200">
@@ -242,12 +274,8 @@ export default function BotaniBridgeLandingPage() {
         </div>
       </section>
 
-      <section
-
-        id="categories"
-        className="scroll-mt-20 bg-white"
-      >
-        <div className="mx-auto max-w-6xl px-6 py-20">
+      <section id="categories" className="scroll-mt-20 bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="max-w-2xl">
             <div className="text-sm font-medium uppercase tracking-[0.24em] text-emerald-700">
               Product Categories
@@ -261,24 +289,22 @@ export default function BotaniBridgeLandingPage() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
             {categories.map((category) => (
               <div
                 key={category.title}
-                className="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-2xl font-semibold tracking-tight text-slate-950">
+                  <h3 className="text-[2rem] font-semibold tracking-tight text-slate-950">
                     {category.title}
                   </h3>
                   <div className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
-                    Category
+                    {category.badge}
                   </div>
                 </div>
 
-                <p className="mt-4 max-w-lg leading-7 text-slate-600">
-                  {category.description}
-                </p>
+                <p className="mt-4 max-w-lg leading-7 text-slate-600">{category.description}</p>
 
                 <div className="mt-6 flex flex-wrap gap-3">
                   {category.items.map((item) => (
@@ -349,12 +375,90 @@ export default function BotaniBridgeLandingPage() {
         <div className="grid gap-4 sm:grid-cols-2">
           {services.map((service) => (
             <div
-              key={service}
-              className="rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-5 text-slate-700 shadow-md shadow-slate-200/40 transition hover:-translate-y-1 hover:shadow-lg"
+              key={service.title}
+              className="flex min-h-[160px] rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-5 text-slate-700 shadow-md shadow-slate-200/40 transition hover:-translate-y-1 hover:shadow-lg"
             >
-              {service}
+              <div>
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-50 text-sm font-semibold text-emerald-700">
+                    {service.icon}
+                  </div>
+                  <div className="inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
+                    Service
+                  </div>
+                </div>
+                <div className="text-base font-semibold leading-7 text-slate-950">
+                  {service.title}
+                </div>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {service.subtitle}
+                </p>
+              </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section id="news" className="scroll-mt-20 border-t border-slate-200 bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="max-w-2xl">
+            <div className="text-sm font-medium uppercase tracking-[0.24em] text-emerald-700">
+              News & Updates
+            </div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
+              Latest updates from BotaniBridge.
+            </h2>
+            <p className="mt-5 leading-8 text-slate-600">
+              This section can be used for industry updates, company announcements,
+              product launches, exhibition participation, or sourcing insights. For now,
+              it works as a clean visual placeholder so the website feels more like a
+              real business site.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <article className="group rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+              <div className="text-sm text-emerald-700">Apr 2026</div>
+              <h3 className="mt-3 text-xl font-semibold tracking-tight text-slate-950">
+                Ingredient sourcing trends in plant extracts
+              </h3>
+              <p className="mt-4 leading-7 text-slate-600">
+                A short update area for market demand, sourcing trends, and product category
+                movements across botanical and nutraceutical ingredients.
+              </p>
+              <div className="mt-6 text-sm font-medium text-slate-900 transition group-hover:text-emerald-700">
+                Read update →
+              </div>
+            </article>
+
+            <article className="group rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+              <div className="text-sm text-emerald-700">Apr 2026</div>
+              <h3 className="mt-3 text-xl font-semibold tracking-tight text-slate-950">
+                New partner manufacturing capabilities
+              </h3>
+              <p className="mt-4 leading-7 text-slate-600">
+                Use this card to introduce new production capacity, OEM support updates,
+                or expanded ingredient categories from selected suppliers.
+              </p>
+              <div className="mt-6 text-sm font-medium text-slate-900 transition group-hover:text-emerald-700">
+                Read update →
+              </div>
+            </article>
+
+            <article className="group rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+              <div className="text-sm text-emerald-700">Apr 2026</div>
+              <h3 className="mt-3 text-xl font-semibold tracking-tight text-slate-950">
+                Trade show participation and business updates
+              </h3>
+              <p className="mt-4 leading-7 text-slate-600">
+                A flexible block for event participation, exhibition recaps, company news,
+                and future updates when real content becomes available.
+              </p>
+              <div className="mt-6 text-sm font-medium text-slate-900 transition group-hover:text-emerald-700">
+                Read update →
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -362,7 +466,7 @@ export default function BotaniBridgeLandingPage() {
         id="contact"
         className="scroll-mt-20 border-t border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-slate-50"
       >
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-2">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-24 md:grid-cols-2">
           <div>
             <div className="text-sm font-medium uppercase tracking-[0.24em] text-emerald-700">
               Contact
